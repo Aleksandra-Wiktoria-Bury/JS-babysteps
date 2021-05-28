@@ -5,16 +5,12 @@ function greet()
 }
 
 
-function greet2 ()
-{
-    let name = document.querySelector('#name2').value;
-    alert("hello again, " + name)
-  
-}
 
-function listen()
-{
-    document.querySelector('#form2').addEventListener('submit',greet2);
-}
-
-document.addEventListener('DOMContentLoaded', listen);
+document.addEventListener('DOMContentLoaded', function()
+{ 
+    document.querySelector('#form2').addEventListener('submit', function()
+    {
+        let name = document.querySelector('#name2').value;
+        alert("hello again, " + name)
+    });
+});
