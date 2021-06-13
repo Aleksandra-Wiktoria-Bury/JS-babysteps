@@ -4,17 +4,35 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
         <script src="scripts.js"></script>
+        <style>
+            body {
+                margin: 0, auto;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            label, input {
+                display:block;
+                margin: 10px;
+            }
+        </style>
     <title>JS</title>
+   
 </head>
 <body>
- <section style="width:90%;margin: 0 auto;">  <form onsubmit="greet(); return false;" style="margin-bottom: 10px;">
+ 
+ <section style="width:90%;margin: 0 auto;">  
+    
+    <!-- 
+        <form onsubmit="greet(); return false;" style="margin-bottom: 10px;">
         <input autocomplete="off" autofocus="on" type="text" id="name" placeholder="Type in your name!">
         <input type="submit" value="Greet me!">
     </form>
     <form id='form2'> <input type="text" id="name2" placeholder="What's your name?">
-        <input type="submit" value="Greet me again!"></form>
+        <input type="submit" value="Greet me again!"></form> -->
+    <h3>Is it a dog?</h3>
+    <form id='form3' onsubmit="patADog(); return false;" style="margin-bottom: 10px;"> 
+        <label for="dogCheck">What sound does the animal do?</label><input type="text" id="dogCheck" placeholder="type in English">
+            <input type="submit" value="Can I pat?"></form>
         
     </section> 
 </body>
