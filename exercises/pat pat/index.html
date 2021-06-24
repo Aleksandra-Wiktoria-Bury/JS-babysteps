@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I want to pat a dog!</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      section {
+        background-color: rgb(207, 206, 204);
+        margin: auto;
+        padding: 50px;
+        width: 60%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      input,
+      label {
+        margin-top: 10px;
+      }
+    </style>
+    <script>
+      function patADog() {
+        let dogCheck = document.querySelector("#dogCheck").value.toLowerCase();
+
+        dogCheck.includes("woof")
+          ? alert("it's a dog! pat, pat")
+          : dogCheck.includes("meow")
+          ? alert("alright, that's a cat, but you can still pat")
+          : alert("find me a dog to pat!");
+      }
+    </script>
+  </head>
+  <body>
+    <section>
+      <h3>Is it a dog?</h3>
+      <form id="form" onsubmit="patADog(); return false;">
+        <label for="dogCheck">What sound does the animal make?</label
+        ><input type="text" id="dogCheck" placeholder="type in English" />
+        <input type="submit" value="Can I pat?" />
+      </form>
+    </section>
+  </body>
+</html>
