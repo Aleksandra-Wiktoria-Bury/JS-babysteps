@@ -105,13 +105,14 @@ console.log(dogAge(4));
 
 console.log('\nA Lifetime Supply:');
 
-const calcLifetimeSupply = (age, amount, maxAge) =>
+const calcLifetimeSupply = (age, amount, maxAge = 100) =>
 {
-    /* const maxAge = 100; */
+
     let result = Math.round((maxAge-age)*365.25*amount)
     return `The snack company should provide you with ${result} units, until you are a ripe old age of ${maxAge}. Happy snacking!`;
 }
 console.log(calcLifetimeSupply(32,0.58,65));
+console.log(calcLifetimeSupply(40, 3));
 
 //? 9. Where's Waldo? 
 
@@ -174,7 +175,7 @@ console.log('\nisPrime?');
 const isPrime = num => {
   for (let i = 2; i < num; i++)
     if (num % i === 0) return false;
-  return num > 1;
+  return true;
 }
   
 console.log(isPrime(7));
